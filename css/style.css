@@ -1,0 +1,147 @@
+.widget {
+  background-color: #EDEDEB;
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.param {
+  display: inline-block;
+  animation-name: bounceParam;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.temp {
+  margin-top: 10px;
+  font-size: 40px;
+  display: inline-block;
+  animation-name: bounceTemp;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.nameCity {
+  font-weight: bolder;
+  display: block;
+  animation-name: bounceNameCity;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.weatherAndTemp {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.weatherAndTemp .imgWeather {
+  width: 70px; 
+  height: 70px;
+  display: inline-block;
+  animation-name: zoomIn;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+
+/* Анимация названия города */
+@keyframes bounceNameCity {
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+/* Анимация параметров (влажность, давление, скорость ветра) */
+@keyframes bounceParam {
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+/* Анимация температуры */
+@keyframes bounceTemp {
+
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Анимация иконки (тип погоды) */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
